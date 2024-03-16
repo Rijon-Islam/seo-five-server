@@ -201,7 +201,7 @@ async function run() {
                     teamMemberImg: memberSection.teamMemberImg,
                     teamMemberName: memberSection.teamMemberName,
                     teamMemberTitle: memberSection.teamMemberTitle,
-                   
+
 
 
                 },
@@ -695,7 +695,7 @@ async function run() {
                     stepTitle: workSection.stepTitle,
                     stepDetails: workSection.stepDetails,
                     stapIcon: workSection.stapIcon,
-                    
+
 
 
                 },
@@ -744,6 +744,7 @@ async function run() {
                 $set: {
                     heading: actionSection.heading,
                     subHeading: actionSection.subHeading,
+
 
 
 
@@ -957,18 +958,16 @@ async function run() {
             const updatedDoc = {
                 $set: {
 
-                    aboutImgOne: aboutSection.aboutImgOne,
-                    aboutImgTwo: aboutSection.aboutImgTwo,
-                    aboutImgThree: aboutSection.aboutImgThree,
+                    aboutImg: aboutSection.aboutImg,
                     aboutText: aboutSection.aboutText,
                     aboutHeading: aboutSection.aboutHeading,
-                    aboutDetails: aboutSection.aboutDetails,
+                    
                     aboutPointOne: aboutSection.aboutPointOne,
+                    aboutPointOneDetails: aboutSection.aboutPointOneDetails,
                     aboutPointTwo: aboutSection.aboutPointTwo,
+                    aboutPointTwoDetails: aboutSection.aboutPointTwoDetails,
                     aboutPointThree: aboutSection.aboutPointThree,
-                    aboutPointFour: aboutSection.aboutPointFour,
-                    callText: aboutSection.callText,
-                    callNumber: aboutSection.callNumber,
+                    aboutPointThreeDetails: aboutSection.aboutPointThreeDetails,
                     buttonText: aboutSection.buttonText,
                     buttonLink: aboutSection.buttonLink,
 
@@ -1196,7 +1195,7 @@ async function run() {
             const options = { upsert: true };
             const updatedDoc = {
                 $set: {
-                    serviceImg: itemSection.serviceImg,
+
                     serviceIcon: itemSection.serviceIcon,
                     serviceName: itemSection.serviceName,
                     serviceTitle: itemSection.serviceTitle,
@@ -1407,7 +1406,7 @@ async function run() {
             const updatedDoc = {
                 $set: {
                     packageName: editPricing.packageName,
-                    
+
                     packagePrice: editPricing.packagePrice,
                     packageButtonText: editPricing.packageButtonText,
                     packagePointOne: editPricing.packagePointOne,
@@ -1575,13 +1574,9 @@ async function run() {
             const options = { upsert: true };
             const updatedDoc = {
                 $set: {
-                    
-                    banLocation: contactSection.banLocation,
-                    ukLocation: contactSection.ukLocation,
-                    
-                    banPhone: contactSection.banPhone,
-                    ukPhone: contactSection.ukPhone,
-                   
+
+                    Location: contactSection.Location,
+                    Phone: contactSection.Phone,
                     footerEmail: contactSection.footerEmail,
 
 
@@ -1631,8 +1626,7 @@ async function run() {
             const options = { upsert: true };
             const updatedDoc = {
                 $set: {
-                    aboutText: footerSection.aboutText,
-                    mainAbout: footerSection.mainAbout,
+                   
                     fblink: footerSection.fblink,
                     inslink: footerSection.inslink,
 
@@ -1975,5 +1969,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Good Job, SEO-5  Server is Live Now', port);
+    console.log('Good Job, SEO-6  Server is Live Now', port);
 });
